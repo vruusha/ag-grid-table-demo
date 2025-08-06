@@ -11,6 +11,7 @@ A modern, responsive data grid application built with React, TypeScript, and AG 
 - **Row Selection**: Singlerow selection with visual feedback
 - **Export Functionality**: CSV export for selected or all data
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **Action Menu**: Overflow menu column with dropdown options per row
 
 ### User Experience
 - **Modern UI**: Clean, professional design with smooth animations
@@ -107,86 +108,12 @@ ag-grid-table-demo/
 ├── tsconfig.json
 ``` 
 
-## 🎨 Design Specifications
-
-The application follows a comprehensive design specification that includes:
-
-### Layout Structure
-- **Header Section**: Gradient background with application title
-- **Main Content Area**: Data grid with controls and pagination
-- **Selection Summary**: Real-time display of selected items
-- **Responsive Layout**: Adapts to different screen sizes
-
-### Data Grid Features
-- **Column Management**: Resizable, reorderable, and hideable columns
-- **Advanced Filtering**: Column-specific filters with floating filter inputs
-- **Sorting**: Multi-column sorting with visual indicators
-- **Pagination**: Configurable page sizes (10, 20, 50, 100)
-- **Export**: CSV export with selection support
-
-### Visual Design
-- **Color Scheme**: Professional blue gradient with neutral grays
-- **Typography**: System fonts for optimal readability
-- **Spacing**: Consistent padding and margins
-- **Animations**: Smooth transitions and hover effects
-
-## 🔧 Configuration
-
-### AG Grid Configuration
-The DataGrid component is highly configurable:
-
-```typescript
-<DataGrid
-  data={data}
-  onRowSelection={handleRowSelection}
-  onExport={handleExport}
-/>
-```
-
-### Column Definitions
-Columns are defined with full customization options:
-
-```typescript
-const columnDefs = [
-  {
-    headerName: 'ID',
-    field: 'id',
-    sortable: true,
-    filter: true,
-    width: 100,
-    checkboxSelection: true,
-  },
-  // ... more columns
-];
-```
-
-## 📊 Sample Data
-
-The application includes a comprehensive sample data generator that creates realistic employee records with:
-
-- **Employee IDs**: Unique identifiers (EMP0001, EMP0002, etc.)
-- **Names**: Realistic first and last names
-- **Email Addresses**: Properly formatted email addresses
-- **Status**: Active/Inactive status with visual badges
-- **Roles**: Various job titles and positions
-- **Departments**: Different organizational departments
-- **Last Login**: Recent login timestamps
-
 ## 🚀 Available Scripts
 
 - `npm start` - Runs the app in development mode
 - `npm test` - Launches the test runner
 - `npm run build` - Builds the app for production
 - `npm run eject` - Ejects from Create React App (one-way operation)
-
-## 🧪 Testing
-
-The application is designed with testing in mind:
-
-- **Unit Tests**: Component functionality testing
-- **Integration Tests**: Grid interactions and data flow
-- **E2E Tests**: Complete user workflow testing
-- **Performance Tests**: Large dataset handling
 
 ## 📱 Responsive Design
 
@@ -195,15 +122,6 @@ The application is fully responsive with breakpoints for:
 - **Desktop**: Full-featured grid with all capabilities
 - **Tablet**: Optimized layout with touch-friendly interactions
 - **Mobile**: Simplified view with essential features
-
-## ♿ Accessibility
-
-Built with accessibility in mind:
-
-- **Keyboard Navigation**: Full keyboard support
-- **Screen Reader**: ARIA labels and semantic HTML
-- **High Contrast**: Support for high contrast mode
-- **Focus Management**: Proper focus indicators
 
 ## 🔄 State Management
 
@@ -218,24 +136,12 @@ The application uses React hooks for state management:
 
 - **Virtual Scrolling**: Efficient rendering of large datasets
 - **Memoization**: Optimized re-renders with useMemo
-- **Lazy Loading**: Data loading with loading states
 - **Memory Management**: Proper cleanup and memory optimization
 
-## 🎯 Success Criteria
 
-All implementation goals have been met:
-
-- ✅ Grid displays data correctly
-- ✅ Sorting works on all columns
-- ✅ Filtering functions properly
-- ✅ Pagination handles large datasets
-- ✅ Export functionality works
-- ✅ Responsive design implemented
-- ✅ Accessibility requirements met
-- ✅ Performance optimized for large datasets
-- ✅ Error states handled gracefully
-- ✅ Code is well-documented and tested
-
+## TODO
+- **Tests**
+  
 ## 🤝 Contributing
 
 1. Fork the repository
