@@ -96,20 +96,16 @@ By default, this runs on [http://localhost:8000](http://localhost:8000).
 ## 🏗️ Project Structure
 
 ```
-falconx-project/
-├── public/                 # Static assets
-├── src/
-│   ├── components/         # React components
-│   │   ├── DataGrid.tsx   # Main AG Grid component
-│   │   └── DataGrid.css   # Grid-specific styles
-│   ├── utils/             # Utility functions
-│   │   └── sampleData.ts  # Sample data generator
-│   ├── App.tsx           # Main application component
-│   ├── App.css           # Application styles
-│   └── index.tsx         # Application entry point
-├── DESIGN_SPECS.md       # Detailed design specifications
-└── README.md            # Project documentation
-```
+ag-grid-table-demo/
+├── backend/              # Python FastAPI backend (mocked API)
+├── public/               # Static frontend assets
+├── src/                  # React source code
+├── .gitignore
+├── package-lock.json
+├── package.json
+├── README.md
+├── tsconfig.json
+``` 
 
 ## 🎨 Design Specifications
 
