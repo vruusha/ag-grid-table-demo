@@ -52,6 +52,47 @@ A modern, responsive data grid application built with React, TypeScript, and AG 
 4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
+---
+
+## 🖥️ Backend: Mocked API Service
+
+A Python FastAPI backend is provided in the `backend` folder to mock order data for frontend development and testing.
+
+### Setup
+
+1. **Create a Virtual Environment (Recommended)**
+   ```bash
+   cd backend
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   pip install fastapi uvicorn pandas numpy
+   ```
+
+### Running the Backend
+
+Start the FastAPI server using Uvicorn:
+```bash
+uvicorn main:app --reload
+```
+By default, this runs on [http://localhost:8000](http://localhost:8000).
+
+### API Endpoints
+
+- `/api/orders`  
+  Returns mocked order data with nested children for grid consumption.
+
+### Notes
+
+- CORS is enabled for all origins to allow frontend requests.
+- The backend generates random order data every time it starts.
+- You can adjust the number of records or mock logic in `main.py`.
+
+---
+
 ## 🏗️ Project Structure
 
 ```
